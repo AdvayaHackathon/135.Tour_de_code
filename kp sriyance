@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tourism Web App</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: yellow;
+            color: black;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .mySlides {display: none;}
+        img {border-radius: 10px;}
+    </style>
+</head>
+<body>
+
+<h1>Welcome to TOUR DE CODE</h1>
+
+<div class="mySlides">
+    <h2>Karnataka</h2>
+    <img src="https://karnatakatourism.org/" width="400">
+</div>
+
+<div class="mySlides">
+    <h2>Goa</h2>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/1/1c/Goa_Beach.jpg" width="400">
+</div>
+
+<div class="mySlides">
+    <h2>rajasthan</h2>
+    <img src="https://obms-tourist.rajasthan.gov.in/" width="400">
+</div>
+
+<br>
+<button onclick="plusSlides(-1)">Previous</button>
+<button onclick="plusSlides(1)">Next</button>
+
+<br><br>
+
+<a href="location.html"><button>Go to Explore Places</button></a>
+
+<br><br>
+
+<!-- New Buttons to visit karnataka & Goa Sites -->
+<a href="https://karnatakatourism.org/" target="_blank"><button>Visit karnataka Site</button></a>
+<a href="https://goa-tourism.com/" target="_blank"><button>Visit Goa Site</button></a>
+<a href="https://obms-tourist.rajasthan.gov.in/" target="_blank"><button>visit rajasthan site</button></a>
+<script>
+var slideIndex=1;
+showSlides(slideIndex);
+
+function plusSlides(n){
+    showSlides(slideIndex+=n);
+}
+
+function showSlides(n){
+    var i;
+    var slides=document.getElementsByClassName("mySlides");
+    if(n>slides.length){slideIndex=1}
+    if(n<1){slideIndex=slides.length}
+    for(i=0;i<slides.length;i++){
+        slides[i].style.display="none";
+    }
+    slides[slideIndex-1].style.display="block";
+}
+</script>
+
+</body>
+</html>
+
+
